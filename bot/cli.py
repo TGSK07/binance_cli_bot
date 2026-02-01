@@ -4,18 +4,27 @@ from bot.client import BinanceFuturesClient
 
 
 def parse_args():
+    """
+    Parse and return CLI arguments
+    using argparse.
+    """
+    
     parser = argparse.ArgumentParser(description="Binance Futures CLI Bot")
     
     parser.add_argument("--sym", required=True, help="Trading symbol (e.g. BTCUSDT)")
     parser.add_argument("--s", required=True, help="BUY or SELL")
     parser.add_argument("--ot", required=True, help="ORDER TYPE (e.g. MARKET OR LIMIT)")
     parser.add_argument("--qty", type=float, required=True)
-    parser.add_argument("--p", type=float, required=False)
-    parser.add_argument("--sp", type=float, required=False)
+    parser.add_argument("--p", type=float, required=False, help="Price is required for LIMIT orders.")
 
     return parser.parse_args()
 
 def cli(settings, logger):
+    """
+    Execute CLI workflow: 
+    parse input, validate, place order, and display results.
+    """
+
     args = parse_args()
 
     try:

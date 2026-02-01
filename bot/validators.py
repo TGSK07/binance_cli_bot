@@ -17,9 +17,10 @@ def validate_symbol(symbol):
 
 def validate_action(action):
     """
-    Docstring for validate_action
-    
-    :param action: Description
+    Validate order side (BUY or SELL).
+
+    Raises:
+        ValueError: If side is invalid.
     """
 
     if action.upper() not in ALLOWED_ACTIONS:
@@ -29,9 +30,10 @@ def validate_action(action):
 
 def validate_order_type(order):
     """
-    Docstring for validate_order_type
-    
-    :param order: Description
+    Validate order type (MARKET or LIMIT).
+
+    Raises:
+        ValueError: If order type is invalid.
     """
 
     if not order:
@@ -44,15 +46,24 @@ def validate_order_type(order):
     
 def validate_quantity(qty):
     """
-    Docstring for validate_quantity
-    
-    :param qty: Description
+    Validate order quantity.
+
+    Raises:
+        ValueError: If quantity is non-positive.
     """
+
     if qty <= 0:
         raise ValueError("Quantity must be greater than 0.")
     return qty
 
 def validate_price(price, order_type):
+    """
+    Validate price for LIMIT orders.
+
+    Raises:
+        ValueError: If price is missing or invalid.
+    """
+    
     if order_type == "LIMIT":
         if price is None:
             raise ValueError("Price is required for LIMIT orders.")
@@ -64,16 +75,16 @@ def validate_price(price, order_type):
 
 def validate_order_input(args):
     """
-    Docstring for validate_order_input
-    
-    :param args: Description
+    Validate and aggregate all CLI inputs
+    into a normalized order payload.
+
+    Returns:
+        dict: Validated order parameters.
     """
-    r = {
+    return {
         "symbol": validate_symbol(args.sym),
         "side": validate_action(args.s),
         "order_type": validate_order_type(args.ot),
         "qty": validate_quantity(args.qty),
         "price": validate_price(args.p, args.ot.upper())
-    }
-    print(r)
-    return r
+        }

@@ -3,6 +3,12 @@ from bot.logger import setup_logger
 from bot.settings import load_settings
 
 def main():
+    """
+    Application entry point.
+    Initializes logging, loads configuration,
+    and triggers the CLI workflow.
+    """
+    
     logger = setup_logger()
 
     try:

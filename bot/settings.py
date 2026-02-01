@@ -3,6 +3,14 @@ from dotenv import load_dotenv
 
 
 def load_settings():
+    """
+    Load Binance API credentials and configuration
+    from environment variables.
+
+    Raises:
+        EnvironmentError: If required variables are missing.
+    """
+    
     load_dotenv()
 
     API_KEY = os.getenv("BINANCE_API_KEY")
