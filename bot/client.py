@@ -8,12 +8,13 @@ class BinanceFuturesClient:
     for Binance Futures (USDT-M) operations.
     """
 
-    def __init__(self, API_KEY, SECRET_KEY, logger):
+    def __init__(self, API_KEY, SECRET_KEY, BASE_URL, logger):
         """
         Initialize Binance Futures client.
         """
         self.logger = logger
         self.client = Client(API_KEY, SECRET_KEY)
+        self.client.FUTURES_TESTNET_URL = BASE_URL
         
 
     def place_market_order(self, symbol, side, qty):

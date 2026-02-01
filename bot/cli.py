@@ -8,7 +8,7 @@ def parse_args():
     Parse and return CLI arguments
     using argparse.
     """
-    
+
     parser = argparse.ArgumentParser(description="Binance Futures CLI Bot")
     
     parser.add_argument("--sym", required=True, help="Trading symbol (e.g. BTCUSDT)")
@@ -39,6 +39,7 @@ def cli(settings, logger):
         client = BinanceFuturesClient(
             settings["BINANCE_API_KEY"],
             settings["BINANCE_SECRET_KEY"],
+            settings["BINANCE_BASE_URL"],
             logger
         )
 
