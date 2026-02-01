@@ -11,7 +11,7 @@ def validate_symbol(symbol):
         ValueError: If symbol format is invalid.
     """
 
-    if not symbol.upper().endwith("USDT"):
+    if not symbol.upper().endswith("USDT"):
         raise ValueError("Symbol must end with USDT (e.g. BITCUSDT)")
     return symbol.upper()
 
@@ -34,8 +34,13 @@ def validate_order_type(order):
     :param order: Description
     """
 
+    if not order:
+        raise ValueError("Order type is mandatory.")
+    
     if order.upper() not in ALLOWED_ORDER_TYPES:
         raise ValueError("Order type must be MARKET or LIMIT")
+    
+    return order
     
 def validate_quantity(qty):
     """
@@ -47,15 +52,15 @@ def validate_quantity(qty):
         raise ValueError("Quantity must be greater than 0.")
     return qty
 
-def validate_price(price, ot):
-    if ot == "LIMIT":
+def validate_price(price, order_type):
+    if order_type == "LIMIT":
         if price is None:
             raise ValueError("Price is required for LIMIT orders.")
     
         if price <= 0:
             raise ValueError("Price must be greater than 0.")
         return price
-    return None
+    return price
 
 def validate_order_input(args):
     """
@@ -63,10 +68,12 @@ def validate_order_input(args):
     
     :param args: Description
     """
-    return {
-        "symbol": validate_symbol(args.symbol),
-        "action": validate_action(args.action),
-        "order_type": validate_order_type(args.order_type),
-        "quantity": validate_quantity(args.quantity),
-        "price": validate_price(args.price, args.order_type.upper())
+    r = {
+        "symbol": validate_symbol(args.sym),
+        "side": validate_action(args.s),
+        "order_type": validate_order_type(args.ot),
+        "qty": validate_quantity(args.qty),
+        "price": validate_price(args.p, args.ot.upper())
     }
+    print(r)
+    return r
