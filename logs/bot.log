@@ -1,0 +1,177 @@
+2026-02-01 17:38:50,145 | INFO | Placing MARKET BUY order: BTCUSDT, quantity=0.0001
+2026-02-01 17:38:50,344 | ERROR | Binance error: APIError(code=-2010): Account has insufficient balance for requested action.
+2026-02-01 17:38:50,345 | ERROR | Order placement failed.
+Traceback (most recent call last):
+  File "D:\Internship\Assignment\CLI Binance Bot\bot\cli.py", line 35, in cli
+    res = client.place_market_order(
+        order_data["symbol"],
+        order_data["side"],
+        order_data["qty"]
+    )
+  File "D:\Internship\Assignment\CLI Binance Bot\bot\client.py", line 17, in place_market_order
+    order = self.client.order_market_buy(
+        symbol=symbol,
+        quantity=qty
+    )
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 1617, in order_market_buy
+    return self.order_market(**params)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 1589, in order_market
+    return self.create_order(**params)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 1450, in create_order
+    return self._post("order", True, data=params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 205, in _post
+    return self._request_api("post", path, signed, version, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 134, in _request_api
+    return self._request(method, uri, signed, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 106, in _request
+    return self._handle_response(self.response)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 115, in _handle_response
+    raise BinanceAPIException(response, response.status_code, response.text)
+binance.exceptions.BinanceAPIException: APIError(code=-2010): Account has insufficient balance for requested action.
+2026-02-01 17:41:36,911 | INFO | PLacing LIMIT BUY: BTCUSDT, quantity=1.01, price=10000.0
+2026-02-01 17:41:37,072 | ERROR | Bianance error: APIError(code=-1102): Mandatory parameter 'type' was not sent, was empty/null, or malformed.
+2026-02-01 17:41:37,072 | ERROR | Order placement failed.
+Traceback (most recent call last):
+  File "D:\Internship\Assignment\CLI Binance Bot\bot\cli.py", line 43, in cli
+    res = client.place_limit_order(
+        order_data["symbol"],
+    ...<2 lines>...
+        order_data["price"]
+    )
+  File "D:\Internship\Assignment\CLI Binance Bot\bot\client.py", line 43, in place_limit_order
+    order = self.client.create_test_order(
+        symbol=symbol,
+    ...<2 lines>...
+        price=price
+    )
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 1912, in create_test_order
+    return self._post("order/test", True, data=params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 205, in _post
+    return self._request_api("post", path, signed, version, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 134, in _request_api
+    return self._request(method, uri, signed, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 106, in _request
+    return self._handle_response(self.response)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 115, in _handle_response
+    raise BinanceAPIException(response, response.status_code, response.text)
+binance.exceptions.BinanceAPIException: APIError(code=-1102): Mandatory parameter 'type' was not sent, was empty/null, or malformed.
+2026-02-01 17:41:56,450 | INFO | PLacing LIMIT BUY: BTCUSDT, quantity=1.01, price=10000.0
+2026-02-01 17:41:56,649 | ERROR | Bianance error: APIError(code=-1102): Mandatory parameter 'timeInForce' was not sent, was empty/null, or malformed.
+2026-02-01 17:41:56,649 | ERROR | Order placement failed.
+Traceback (most recent call last):
+  File "D:\Internship\Assignment\CLI Binance Bot\bot\cli.py", line 43, in cli
+    res = client.place_limit_order(
+        order_data["symbol"],
+    ...<2 lines>...
+        order_data["price"]
+    )
+  File "D:\Internship\Assignment\CLI Binance Bot\bot\client.py", line 43, in place_limit_order
+    order = self.client.create_test_order(
+        symbol=symbol,
+    ...<3 lines>...
+        price=price
+    )
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 1912, in create_test_order
+    return self._post("order/test", True, data=params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 205, in _post
+    return self._request_api("post", path, signed, version, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 134, in _request_api
+    return self._request(method, uri, signed, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 106, in _request
+    return self._handle_response(self.response)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 115, in _handle_response
+    raise BinanceAPIException(response, response.status_code, response.text)
+binance.exceptions.BinanceAPIException: APIError(code=-1102): Mandatory parameter 'timeInForce' was not sent, was empty/null, or malformed.
+2026-02-01 17:42:15,764 | INFO | PLacing LIMIT BUY: BTCUSDT, quantity=1.01, price=10000.0
+2026-02-01 17:42:15,968 | ERROR | Bianance error: APIError(code=-1013): Filter failure: PERCENT_PRICE_BY_SIDE
+2026-02-01 17:42:15,969 | ERROR | Order placement failed.
+Traceback (most recent call last):
+  File "D:\Internship\Assignment\CLI Binance Bot\bot\cli.py", line 43, in cli
+    res = client.place_limit_order(
+        order_data["symbol"],
+    ...<2 lines>...
+        order_data["price"]
+    )
+  File "D:\Internship\Assignment\CLI Binance Bot\bot\client.py", line 43, in place_limit_order
+    order = self.client.create_test_order(
+        symbol=symbol,
+    ...<4 lines>...
+        price=price
+    )
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 1912, in create_test_order
+    return self._post("order/test", True, data=params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 205, in _post
+    return self._request_api("post", path, signed, version, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 134, in _request_api
+    return self._request(method, uri, signed, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 106, in _request
+    return self._handle_response(self.response)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 115, in _handle_response
+    raise BinanceAPIException(response, response.status_code, response.text)
+binance.exceptions.BinanceAPIException: APIError(code=-1013): Filter failure: PERCENT_PRICE_BY_SIDE
+2026-02-01 17:43:05,941 | INFO | PLacing LIMIT BUY: BTCUSDT, quantity=0.001, price=10000.0
+2026-02-01 17:43:06,144 | ERROR | Bianance error: APIError(code=-1013): Filter failure: PERCENT_PRICE_BY_SIDE
+2026-02-01 17:43:06,144 | ERROR | Order placement failed.
+Traceback (most recent call last):
+  File "D:\Internship\Assignment\CLI Binance Bot\bot\cli.py", line 43, in cli
+    res = client.place_limit_order(
+        order_data["symbol"],
+    ...<2 lines>...
+        order_data["price"]
+    )
+  File "D:\Internship\Assignment\CLI Binance Bot\bot\client.py", line 43, in place_limit_order
+    order = self.client.create_test_order(
+        symbol=symbol,
+    ...<4 lines>...
+        price=price
+    )
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 1912, in create_test_order
+    return self._post("order/test", True, data=params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 205, in _post
+    return self._request_api("post", path, signed, version, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 134, in _request_api
+    return self._request(method, uri, signed, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 106, in _request
+    return self._handle_response(self.response)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 115, in _handle_response
+    raise BinanceAPIException(response, response.status_code, response.text)
+binance.exceptions.BinanceAPIException: APIError(code=-1013): Filter failure: PERCENT_PRICE_BY_SIDE
+2026-02-01 17:43:16,385 | INFO | PLacing LIMIT BUY: BTCUSDT, quantity=0.001, price=50000.0
+2026-02-01 17:43:16,588 | INFO | Order response: {}
+2026-02-01 17:43:16,588 | ERROR | Order placement failed.
+Traceback (most recent call last):
+  File "D:\Internship\Assignment\CLI Binance Bot\bot\cli.py", line 43, in cli
+    res = client.place_limit_order(
+        order_data["symbol"],
+    ...<2 lines>...
+        order_data["price"]
+    )
+  File "D:\Internship\Assignment\CLI Binance Bot\bot\client.py", line 59, in place_limit_order
+    raise RuntimeError(
+        "Empty response from Binance. Order was not accepted."
+    )
+RuntimeError: Empty response from Binance. Order was not accepted.
+2026-02-01 17:43:37,990 | INFO | PLacing LIMIT BUY: BTCUSDT, quantity=0.001, price=40000.0
+2026-02-01 17:43:38,195 | INFO | Order response: {}
