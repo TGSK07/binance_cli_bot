@@ -175,3 +175,389 @@ Traceback (most recent call last):
 RuntimeError: Empty response from Binance. Order was not accepted.
 2026-02-01 17:43:37,990 | INFO | PLacing LIMIT BUY: BTCUSDT, quantity=0.001, price=40000.0
 2026-02-01 17:43:38,195 | INFO | Order response: {}
+2026-02-02 09:48:42,136 | INFO | Placing MARKET BUY order: BTCUSDT, quantity=0.001
+2026-02-02 09:48:42,339 | ERROR | Binance error: APIError(code=-2015): Invalid API-key, IP, or permissions for action.
+2026-02-02 09:48:42,340 | ERROR | Order placement failed.
+Traceback (most recent call last):
+  File "D:\Internship\Assignment\CLI Binance Bot\bot\cli.py", line 47, in cli
+    res = client.place_market_order(
+        order_data["symbol"],
+        order_data["side"],
+        order_data["qty"]
+    )
+  File "D:\Internship\Assignment\CLI Binance Bot\bot\client.py", line 32, in place_market_order
+    order = self.client.order_market_buy(
+        symbol=symbol,
+        quantity=qty
+    )
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 1617, in order_market_buy
+    return self.order_market(**params)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 1589, in order_market
+    return self.create_order(**params)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 1450, in create_order
+    return self._post("order", True, data=params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 205, in _post
+    return self._request_api("post", path, signed, version, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 134, in _request_api
+    return self._request(method, uri, signed, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 106, in _request
+    return self._handle_response(self.response)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 115, in _handle_response
+    raise BinanceAPIException(response, response.status_code, response.text)
+binance.exceptions.BinanceAPIException: APIError(code=-2015): Invalid API-key, IP, or permissions for action.
+2026-02-02 09:50:03,546 | INFO | Placing MARKET BUY order: BTCUSDT, quantity=0.001
+2026-02-02 09:50:03,746 | ERROR | Binance error: APIError(code=-2015): Invalid API-key, IP, or permissions for action.
+2026-02-02 09:50:03,746 | ERROR | Order placement failed.
+Traceback (most recent call last):
+  File "D:\Internship\Assignment\CLI Binance Bot\bot\cli.py", line 47, in cli
+    res = client.place_market_order(
+        order_data["symbol"],
+        order_data["side"],
+        order_data["qty"]
+    )
+  File "D:\Internship\Assignment\CLI Binance Bot\bot\client.py", line 32, in place_market_order
+    order = self.client.order_market_buy(
+        symbol=symbol,
+        quantity=qty
+    )
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 1617, in order_market_buy
+    return self.order_market(**params)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 1589, in order_market
+    return self.create_order(**params)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 1450, in create_order
+    return self._post("order", True, data=params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 205, in _post
+    return self._request_api("post", path, signed, version, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 134, in _request_api
+    return self._request(method, uri, signed, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 106, in _request
+    return self._handle_response(self.response)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 115, in _handle_response
+    raise BinanceAPIException(response, response.status_code, response.text)
+binance.exceptions.BinanceAPIException: APIError(code=-2015): Invalid API-key, IP, or permissions for action.
+2026-02-02 09:53:08,169 | INFO | Placing MARKET BUY order: BTCUSDT, quantity=0.001
+2026-02-02 09:53:08,376 | ERROR | Binance error: APIError(code=-2015): Invalid API-key, IP, or permissions for action.
+2026-02-02 09:53:08,376 | ERROR | Order placement failed.
+Traceback (most recent call last):
+  File "D:\Internship\Assignment\CLI Binance Bot\bot\cli.py", line 47, in cli
+    res = client.place_market_order(
+        order_data["symbol"],
+        order_data["side"],
+        order_data["qty"]
+    )
+  File "D:\Internship\Assignment\CLI Binance Bot\bot\client.py", line 32, in place_market_order
+    order = self.client.order_market_buy(
+        symbol=symbol,
+        quantity=qty
+    )
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 1617, in order_market_buy
+    return self.order_market(**params)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 1589, in order_market
+    return self.create_order(**params)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 1450, in create_order
+    return self._post("order", True, data=params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 205, in _post
+    return self._request_api("post", path, signed, version, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 134, in _request_api
+    return self._request(method, uri, signed, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 106, in _request
+    return self._handle_response(self.response)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 115, in _handle_response
+    raise BinanceAPIException(response, response.status_code, response.text)
+binance.exceptions.BinanceAPIException: APIError(code=-2015): Invalid API-key, IP, or permissions for action.
+2026-02-02 09:53:16,080 | INFO | Placing MARKET BUY order: BTCUSDT, quantity=0.001
+2026-02-02 09:53:16,263 | ERROR | Binance error: APIError(code=-2015): Invalid API-key, IP, or permissions for action.
+2026-02-02 09:53:16,263 | ERROR | Order placement failed.
+Traceback (most recent call last):
+  File "D:\Internship\Assignment\CLI Binance Bot\bot\cli.py", line 47, in cli
+    res = client.place_market_order(
+        order_data["symbol"],
+        order_data["side"],
+        order_data["qty"]
+    )
+  File "D:\Internship\Assignment\CLI Binance Bot\bot\client.py", line 32, in place_market_order
+    order = self.client.order_market_buy(
+        symbol=symbol,
+        quantity=qty
+    )
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 1617, in order_market_buy
+    return self.order_market(**params)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 1589, in order_market
+    return self.create_order(**params)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 1450, in create_order
+    return self._post("order", True, data=params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 205, in _post
+    return self._request_api("post", path, signed, version, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 134, in _request_api
+    return self._request(method, uri, signed, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 106, in _request
+    return self._handle_response(self.response)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 115, in _handle_response
+    raise BinanceAPIException(response, response.status_code, response.text)
+binance.exceptions.BinanceAPIException: APIError(code=-2015): Invalid API-key, IP, or permissions for action.
+2026-02-02 14:38:32,617 | INFO | Placing MARKET BUY order: BTCUSDT, quantity=0.001
+2026-02-02 14:38:32,861 | INFO | Order response: {'symbol': 'BTCUSDT', 'orderId': 4845258, 'orderListId': -1, 'clientOrderId': 'x-HNA2TXFJ1ff61d5228d57928328db8', 'transactTime': 1770023315302, 'price': '0.00000000', 'origQty': '0.00100000', 'executedQty': '0.00100000', 'origQuoteOrderQty': '0.00000000', 'cummulativeQuoteQty': '76.77901000', 'status': 'FILLED', 'timeInForce': 'GTC', 'type': 'MARKET', 'side': 'BUY', 'workingTime': 1770023315302, 'fills': [{'price': '76779.01000000', 'qty': '0.00100000', 'commission': '0.00000000', 'commissionAsset': 'BTC', 'tradeId': 1294617}], 'selfTradePreventionMode': 'EXPIRE_MAKER'}
+2026-02-02 14:39:25,766 | INFO | PLacing LIMIT BUY: BTCUSDT, quantity=0.001, price=30000.0
+2026-02-02 14:39:25,997 | ERROR | Binance error: APIError(code=-1013): Filter failure: PERCENT_PRICE_BY_SIDE
+2026-02-02 14:39:25,997 | ERROR | Order placement failed.
+Traceback (most recent call last):
+  File "D:\Internship\Assignment\CLI Binance Bot\bot\cli.py", line 54, in cli
+    res = client.place_limit_order(
+        order_data["symbol"],
+    ...<2 lines>...
+        order_data["price"]
+    )
+  File "D:\Internship\Assignment\CLI Binance Bot\bot\client.py", line 67, in place_limit_order
+    order = self.client.order_limit_buy(
+        symbol=symbol,
+        quantity=qty,
+        price=price
+    )
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 1524, in order_limit_buy
+    return self.order_limit(timeInForce=timeInForce, **params)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 1486, in order_limit
+    return self.create_order(**params)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 1450, in create_order
+    return self._post("order", True, data=params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 205, in _post
+    return self._request_api("post", path, signed, version, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 134, in _request_api
+    return self._request(method, uri, signed, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 106, in _request
+    return self._handle_response(self.response)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 115, in _handle_response
+    raise BinanceAPIException(response, response.status_code, response.text)
+binance.exceptions.BinanceAPIException: APIError(code=-1013): Filter failure: PERCENT_PRICE_BY_SIDE
+2026-02-02 14:39:32,745 | ERROR | Order placement failed.
+Traceback (most recent call last):
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\urllib3\connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+        (self._dns_host, self.port),
+    ...<2 lines>...
+        socket_options=self.socket_options,
+    )
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\deepa\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 977, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\urllib3\connection.py", line 759, in connect
+    self.sock = sock = self._new_conn()
+                       ~~~~~~~~~~~~~~^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\urllib3\connection.py", line 211, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: HTTPSConnection(host='testnet.binance.vision', port=443): Failed to resolve 'testnet.binance.vision' ([Errno 11001] getaddrinfo failed)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\requests\adapters.py", line 644, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\urllib3\util\retry.py", line 535, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='testnet.binance.vision', port=443): Max retries exceeded with url: /api/v3/ping (Caused by NameResolutionError("HTTPSConnection(host='testnet.binance.vision', port=443): Failed to resolve 'testnet.binance.vision' ([Errno 11001] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Internship\Assignment\CLI Binance Bot\bot\cli.py", line 39, in cli
+    client = BinanceFuturesClient(
+        settings["BINANCE_API_KEY"],
+    ...<2 lines>...
+        logger
+    )
+  File "D:\Internship\Assignment\CLI Binance Bot\bot\client.py", line 16, in __init__
+    self.client = Client(API_KEY, SECRET_KEY, testnet=True)
+                  ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 55, in __init__
+    self.ping()
+    ~~~~~~~~~^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 368, in ping
+    return self._get("ping")
+           ~~~~~~~~~^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 200, in _get
+    return self._request_api("get", path, signed, version, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 134, in _request_api
+    return self._request(method, uri, signed, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 92, in _request
+    self.response = getattr(self.session, method)(uri, headers=headers, data=data, **kwargs)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\requests\sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\requests\adapters.py", line 677, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='testnet.binance.vision', port=443): Max retries exceeded with url: /api/v3/ping (Caused by NameResolutionError("HTTPSConnection(host='testnet.binance.vision', port=443): Failed to resolve 'testnet.binance.vision' ([Errno 11001] getaddrinfo failed)"))
+2026-02-02 14:40:15,733 | ERROR | Order placement failed.
+Traceback (most recent call last):
+  File "D:\Internship\Assignment\CLI Binance Bot\bot\cli.py", line 39, in cli
+    client = BinanceFuturesClient(
+        settings["BINANCE_API_KEY"],
+    ...<2 lines>...
+        logger
+    )
+TypeError: BinanceFuturesClient.__init__() takes 4 positional arguments but 5 were given
+2026-02-02 14:40:42,928 | ERROR | Order placement failed.
+Traceback (most recent call last):
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\urllib3\connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+        (self._dns_host, self.port),
+    ...<2 lines>...
+        socket_options=self.socket_options,
+    )
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\deepa\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 977, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\urllib3\connection.py", line 759, in connect
+    self.sock = sock = self._new_conn()
+                       ~~~~~~~~~~~~~~^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\urllib3\connection.py", line 211, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: HTTPSConnection(host='testnet.binance.vision', port=443): Failed to resolve 'testnet.binance.vision' ([Errno 11001] getaddrinfo failed)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\requests\adapters.py", line 644, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\urllib3\util\retry.py", line 535, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='testnet.binance.vision', port=443): Max retries exceeded with url: /api/v3/ping (Caused by NameResolutionError("HTTPSConnection(host='testnet.binance.vision', port=443): Failed to resolve 'testnet.binance.vision' ([Errno 11001] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Internship\Assignment\CLI Binance Bot\bot\cli.py", line 39, in cli
+    client = BinanceFuturesClient(
+        settings["BINANCE_API_KEY"],
+        settings["BINANCE_SECRET_KEY"],
+        logger
+    )
+  File "D:\Internship\Assignment\CLI Binance Bot\bot\client.py", line 16, in __init__
+    self.client = Client(API_KEY, SECRET_KEY, testnet=True)
+                  ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 55, in __init__
+    self.ping()
+    ~~~~~~~~~^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 368, in ping
+    return self._get("ping")
+           ~~~~~~~~~^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 200, in _get
+    return self._request_api("get", path, signed, version, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 134, in _request_api
+    return self._request(method, uri, signed, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\binance\client.py", line 92, in _request
+    self.response = getattr(self.session, method)(uri, headers=headers, data=data, **kwargs)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\requests\sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Internship\Assignment\CLI Binance Bot\venv\Lib\site-packages\requests\adapters.py", line 677, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='testnet.binance.vision', port=443): Max retries exceeded with url: /api/v3/ping (Caused by NameResolutionError("HTTPSConnection(host='testnet.binance.vision', port=443): Failed to resolve 'testnet.binance.vision' ([Errno 11001] getaddrinfo failed)"))
+2026-02-02 14:40:56,902 | INFO | Placing MARKET BUY order: BTCUSDT, quantity=0.001
+2026-02-02 14:40:57,103 | INFO | Order response: {'symbol': 'BTCUSDT', 'orderId': 4845560, 'orderListId': -1, 'clientOrderId': 'x-HNA2TXFJa748af9dc5828f834d33e9', 'transactTime': 1770023459515, 'price': '0.00000000', 'origQty': '0.00100000', 'executedQty': '0.00100000', 'origQuoteOrderQty': '0.00000000', 'cummulativeQuoteQty': '76.77447000', 'status': 'FILLED', 'timeInForce': 'GTC', 'type': 'MARKET', 'side': 'BUY', 'workingTime': 1770023459515, 'fills': [{'price': '76774.47000000', 'qty': '0.00100000', 'commission': '0.00000000', 'commissionAsset': 'BTC', 'tradeId': 1294701}], 'selfTradePreventionMode': 'EXPIRE_MAKER'}
+2026-02-02 14:41:40,152 | INFO | PLacing LIMIT SELL: BTCUSDT, quantity=0.01, price=42000.0
+2026-02-02 14:41:40,477 | INFO | Order response: {'symbol': 'BTCUSDT', 'orderId': 4845640, 'orderListId': -1, 'clientOrderId': 'x-HNA2TXFJee3a9d06424f7d838feab0', 'transactTime': 1770023502862, 'price': '42000.00000000', 'origQty': '0.01000000', 'executedQty': '0.01000000', 'origQuoteOrderQty': '0.00000000', 'cummulativeQuoteQty': '768.25620000', 'status': 'FILLED', 'timeInForce': 'GTC', 'type': 'LIMIT', 'side': 'SELL', 'workingTime': 1770023502862, 'fills': [{'price': '76825.62000000', 'qty': '0.01000000', 'commission': '0.00000000', 'commissionAsset': 'USDT', 'tradeId': 1294711}], 'selfTradePreventionMode': 'EXPIRE_MAKER'}

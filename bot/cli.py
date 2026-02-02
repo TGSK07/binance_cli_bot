@@ -39,7 +39,6 @@ def cli(settings, logger):
         client = BinanceFuturesClient(
             settings["BINANCE_API_KEY"],
             settings["BINANCE_SECRET_KEY"],
-            settings["BINANCE_BASE_URL"],
             logger
         )
 
