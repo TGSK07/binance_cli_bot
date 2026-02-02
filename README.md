@@ -77,10 +77,10 @@ BINANCE_BASE_URL=https://testnet.binancefuture.com
 All commands are executed from the project root.
 
 ### 1. Market Order Example
-python main.py --symbol BTCUSDT --s BUY --ot MARKET --qty 0.01
+python main.py --sym BTCUSDT --s BUY --ot MARKET --qty 0.01
 
 ### 2. Limit Order Example
-python main.py --symbol BTCUSDT --s SELL --ot LIMIT --qty 0.01 --p 42000
+python main.py --sym BTCUSDT --s SELL --ot LIMIT --qty 0.01 --p 42000
 
 
 ## Assumptions
