@@ -70,6 +70,7 @@ pip install -r requirements.txt
 Add creds in .env file. 
 
 BINANCE_API_KEY=your_testnet_api_key
+
 BINANCE_API_SECRET=your_testnet_secret_key
 
 For api_key visit this link: https://testnet.binance.vision
