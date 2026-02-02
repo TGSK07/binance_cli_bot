@@ -71,7 +71,8 @@ Add creds in .env file.
 
 BINANCE_API_KEY=your_testnet_api_key
 BINANCE_API_SECRET=your_testnet_secret_key
-BINANCE_BASE_URL=https://testnet.binancefuture.com
+
+For api_key visit this link: https://testnet.binance.vision
 
 ## How to Run
 All commands are executed from the project root.
