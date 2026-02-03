@@ -61,7 +61,7 @@ def cli(settings, logger):
         print(f"Order ID    : {res.get('orderId')}")
         print(f"Status      : {res.get('status')}")
         print(f"Executed Qty : {res.get('executedQty')}")
-        print(f"Avg. Price  : {res.get('avgPrice', 'N/A')}")
+        print(f"Avg. Price  : {client.get_avg_price().get("price")}")
 
     except Exception as e:
         logger.exception("Order placement failed.")

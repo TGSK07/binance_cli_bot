@@ -89,3 +89,6 @@ class BinanceFuturesClient:
         except Exception as e:
             self.logger.error(f"Error: {e}")
             raise
+
+    def get_avg_price(self,sym="BTCUSDT"):
+        return self.client.get_avg_price(symbol=sym)
